@@ -1,7 +1,7 @@
 import os
 
-path = 'H:/Automation/Python/Reconhire/Input files/'
-OutputCsv = 'H:/Automation/Python/Reconhire/Output files/Output.csv'
+path = 'H:/Automation/Python/MO/XML files/'
+OutputCsv = 'H:/Automation/Python/MO/Output file/Filenames.csv'
 OutputFile = open(OutputCsv,'w')
 OutputFile.write('Filenames')
 OutputFile.write('\n')
@@ -10,7 +10,7 @@ files = []
 
 for r,d,f in os.walk(path):
     for file in f:
-        if '.xml' in file:
+        if '.csv' in file:
             files.append(file)
 
 for f in files:
